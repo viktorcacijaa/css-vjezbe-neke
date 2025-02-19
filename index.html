@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primjeri Pozicioniranja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 2000px; /* Da se stvori mogućnost scrollanja */
+      margin: 0;
+    }
+
+    .container {
+      position: relative; /* Ovo je roditeljski element za pozicioniranje */
+      height: 300px;
+      background-color: blue;
+      margin-bottom: 20px;
+    }
+
+    /* 1. Static (default) */
+    .static-box {
+      position: static;
+      background-color: rgb(8, 55, 8);
+      padding: 10px;
+      border: 1px solid rgb(183, 45, 116);
+      margin-bottom: 20px;
+    }
+
+    /* 2. Relative */
+    .relative-box {
+      position: relative;
+      background-color: rgb(85, 0, 0);
+      padding: 10px;
+      border: 1px solid rgb(13, 94, 6);
+      top: 50px; /* Pomjera se 50px prema dolje */
+    }
+
+    /* 3. Absolute */
+    .absolute-box {
+      position: absolute;
+      background-color: lightyellow;
+      padding: 10px;
+      border: 1px solid goldenrod;
+      top: 100px; /* Pomjera se 100px od vrha roditeljskog elementa */
+      left: 50px;
+    }
+
+    /* 4. Fixed */
+    .fixed-box {
+      position: fixed;
+      background-color: lightpink;
+      padding: 10px;
+      border: 1px solid hotpink;
+      top: 20px;
+      right: 20px; /* Držat će se u gornjem desnom kutu ekrana */
+    }
+
+    /* 5. Z-index */
+    .zindex-box-1 {
+      position: relative;
+      background-color: red;
+      padding: 10px;
+      border: 1px solid orangered;
+      z-index: 1; /* Ovaj element će biti ispod drugog */
+    }
+
+    .zindex-box-2 {
+      position: relative;
+      background-color: green;
+      padding: 10px;
+      border: 1px solid purple;
+      z-index: 2; /* Ovaj element će biti iznad prvog */
+      margin-top: -40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="static-box">
+    Static Box - Ovo je statički pozicionirani element (default).
+  </div>
+
+  <div class="relative-box">
+    Relative Box - Pomaknut je 50px prema dolje u odnosu na svoje početno mjesto.
+  </div>
+
+  <div class="container">
+    <div class="absolute-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt vel quam ac congue. Etiam vestibulum sit amet sem sed fermentum. Suspendisse porttitor libero sapien, sit amet consectetur justo consequat ac. Suspendisse congue semper arcu sollicitudin viverra. Aenean tincidunt tempus lectus lobortis pretium. Nam velit arcu,
+     porta id pellentesque quis, vulputate ac lorem. Phasellus lobortis porta accumsan.
+
+        Cras quis dolor nec leo volutpat maximus. Mauris eu nibh aliquam, dictum sapien eget, commodo arcu. Sed vel pretium est. Suspendisse odio diam, placerat quis orci non, iaculis vehicula lacus. Aenean sodales nulla magna, eu cursus magna interdum sit amet. Vestibulum imperdiet massa elementum diam facilisis, luctus luctus ex elementum. Fusce imperdiet turpis ante, quis rhoncus dui eleifend sed. Phasellus a aliquam elit, nec lacinia mi.
+    </div>
+  </div>
+
+  <div class="fixed-box">
+    Fixed Box - Ovaj element ostaje na svom mjestu dok skrolate stranicu.
+  </div>
+
+  <div class="zindex-box-1">
+    Z-index Box 1 - Ovaj element je ispod drugog elementa u z-index hijerarhiji.
+  </div>
+
+  <div class="zindex-box-2">
+    Z-index Box 2 - Ovaj element je iznad prvog elementa zbog većeg z-index.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* 2. Relative */
+.relative-box {
+    position: relative;
+    background-color: rgb(85, 0, 0);
+    padding: 10px;
+    border: 1px solid rgb(13, 94, 6);
+    top: 50px; /* Pomjera se 50px prema dolje */
+  }
+
+  /* 3. Absolute */
+  .absolute-box {
+    position: absolute;
+    background-color: lightyellow;
+    padding: 10px;
+    border: 1px solid goldenrod;
+    top: 100px; /* Pomjera se 100px od vrha roditeljskog elementa */
+    left: 50px;
+  }
+
+  /* 4. Fixed */
+  .fixed-box {
+    position: fixed;
+    background-color: lightpink;
+    padding: 10px;
+    border: 1px solid hotpink;
+    top: 20px;
+    right: 20px; /* Držat će se u gornjem desnom kutu ekrana */
+  }
+
+  /* 5. Z-index */
+  .zindex-box-1 {
+    position: relative;
+    background-color: red;
+    padding: 10px;
+    border: 1px solid orangered;
+    z-index: 1; /* Ovaj element će biti ispod drugog */
+  }
+
+  .zindex-box-2 {
+    position: relative;
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    border: 1px solid gold;
+    z-index: 2; /* Ovaj element će biti iznad prvog */
+    margin-top: -40px;
+  }
